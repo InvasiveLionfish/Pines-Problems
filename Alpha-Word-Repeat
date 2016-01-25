@@ -1,0 +1,22 @@
+=begin
+	 Let's write a program which asks us to type in as many words as we want (one word per line, continuing until we just press Enter on an empty line), and which then repeats the words back to us in alphabetical order. OK? 
+=end
+
+puts "Type in as many words as you want"
+input = gets.chomp
+
+array = input.split(" ")
+
+puts array.sort
+
+=begin ELEGANT SOLUTION
+input1 = [ ]
+input = "x"
+ 
+while input != ""
+  input = gets.chomp
+  input1.push(input)
+end
+puts
+puts input1.sort
+=end 
