@@ -1,0 +1,21 @@
+=begin
+	Write a Deaf Grandma program. Whatever you say to grandma, she should respond with HUH?!  SPEAK UP, SONNY!, unless you shout it (type in all capitals). If you shout, she can hear you and yells back, NO, NOT SINCE 1938! To make your program really believable, have grandma shout a different year each time; maybe any year at random between 1930 and 1950. You can't stop talking to grandma until you shout BYE.
+=end
+
+puts "What do you want to say to Granny?"
+input = gets.chomp 
+
+while input != "BYE"
+  if (input == input.downcase)
+    puts "HUH?!  SPEAK UP, SONNY!"
+    input = gets.chomp
+  elsif (input == input.upcase)
+    puts "NO, NOT SINCE 19" + rand(30..50).to_s + "!"
+    puts "SAY SOMETHING ELSE SONNY!"
+    input = gets.chomp
+  end
+end   
+
+    if input == "BYE"
+      puts "BYE SONNY!!! COME BACK SOON!"
+    end 
